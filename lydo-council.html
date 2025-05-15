@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYDO Council - Youth Governance System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --secondary: #6c757d;
+    }
+    
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .sk-logo {
+      height: 40px;
+    }
+    
+    .auth-btn {
+      font-weight: 600;
+    }
+    
+    .signup-btn {
+      background-color: var(--primary);
+      color: white !important;
+      border-radius: 20px;
+      padding: 8px 20px !important;
+    }
+    
+    .section-divider {
+      height: 4px;
+      width: 60px;
+      background-color: var(--primary);
+      margin-bottom: 30px;
+    }
+    
+    .council-hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/council-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .member-card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .member-img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .member-info {
+      padding: 20px;
+    }
+    
+    .role-badge {
+      background-color: var(--primary);
+      color: white;
+      font-size: 0.8rem;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    
+    .social-icons a {
+      width: 36px;
+      height: 36px;
+      background-color: #f8f9fa;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      transition: all 0.3s;
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--primary);
+      color: white !important;
+    }
+    
+    .council-section {
+      padding: 80px 0;
+    }
+    
+    .org-chart {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    .council-achievements li {
+      margin-bottom: 15px;
+    }
+    
+    .achievement-icon {
+      color: var(--primary);
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/temp-lydo.png" alt="LYDO Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="lydo-council.html">LYDO Council</a></li>
+          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Programs & Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="kk-profiling.html">KK Profiling</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link auth-btn signin-btn" href="#">Sign In</a></li>
+          <li class="nav-item"><a class="nav-link auth-btn signup-btn" href="#">Sign Up</a></li>
+          <li class="nav-item ms-3 d-none d-lg-block">
+            <a href="#">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="council-hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4">Local Youth Development Office Council</h1>
+      <p class="lead mb-5">Meet the dedicated team of youth leaders driving change in San Jose, Batangas</p>
+      <a href="#council-members" class="btn btn-light btn-lg">Meet the Council</a>
+    </div>
+  </section>
+
+  <!-- About Council Section -->
+  <section class="council-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold mb-3">About the LYDO Council</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="lead">The Local Youth Development Office Council serves as the coordinating body for all youth-related programs and initiatives in San Jose, Batangas. Working in conjunction with the Sangguniang Kabataan, the LYDO Council ensures that youth governance is inclusive, transparent, and responsive to the needs of young people.</p>
+        </div>
+      </div>
+      
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h3 class="fw-bold mb-4">Our Responsibilities</h3>
+          <ul class="list-unstyled">
+            <li class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i> Formulating and implementing the Local Youth Development Plan</li>
+            <li class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i> Coordinating youth programs across all barangays</li>
+            <li class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i> Ensuring proper allocation and utilization of youth development funds</li>
+            <li class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i> Facilitating youth representation in local governance processes</li>
+            <li class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i> Building partnerships with government agencies, NGOs, and private sector</li>
+            <li><i class="fas fa-check-circle me-2 text-primary"></i> Monitoring and evaluating youth programs and initiatives</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow">
+            <div class="card-body p-4">
+              <h4 class="fw-bold mb-4">Key Achievements</h4>
+              <ul class="list-unstyled council-achievements">
+                <li>
+                  <i class="fas fa-trophy achievement-icon"></i>
+                  <strong>Comprehensive Youth Database</strong>
+                  <p class="text-muted mb-0">Established the first digital profiling system for youth in San Jose</p>
+                </li>
+                <li>
+                  <i class="fas fa-trophy achievement-icon"></i>
+                  <strong>Youth Participatory Budgeting</strong>
+                  <p class="text-muted mb-0">Implemented an inclusive process allowing youth direct input in budget allocation</p>
+                </li>
+                <li>
+                  <i class="fas fa-trophy achievement-icon"></i>
+                  <strong>Inter-Barangay Youth Network</strong>
+                  <p class="text-muted mb-0">Created a collaborative platform connecting youth leaders across all barangays</p>
+                </li>
+                <li>
+                  <i class="fas fa-trophy achievement-icon"></i>
+                  <strong>Youth Leadership Academy</strong>
+                  <p class="text-muted mb-0">Trained over 500 young leaders in governance and project management</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizational Structure -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold mb-3">Organizational Structure</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="lead">Understanding how the LYDO Council works with other youth governance bodies</p>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <img src="/api/placeholder/800/500" alt="Organizational Chart" class="img-fluid org-chart shadow rounded">
+          
+          <div class="row mt-5 g-4">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">Executive Committee</h4>
+                  <p class="card-text">Oversees the overall direction and implementation of youth development programs and policies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">Technical Working Groups</h4>
+                  <p class="card-text">Specialized teams focusing on specific areas such as education, entrepreneurship, sports, arts, and environmental initiatives.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">Barangay Coordinators</h4>
+                  <p class="card-text">Representatives ensuring effective implementation of programs at the barangay level and facilitating communication with local youth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Council Members -->
+  <section class="council-section" id="council-members">
+    <div class="container">
+      <div class="row
