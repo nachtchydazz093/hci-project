@@ -1,16 +1,7 @@
 :root {
-  --primary: #2e3192;
-  --secondary: #ffc107;
-  --accent: #ff5722;
-  --dark: #212529;
-  --light: #f8f9fa;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light);
-  color: var(--dark);
-  scroll-behavior: smooth;
+  --primary: #2e3192; /* blue */
+  --secondary: #ffc107; /* yellow */
+  --light-bg: #f8f9fa;
 }
 
 /* Navbar Styling */
@@ -176,139 +167,106 @@ body {
   }
 }
 
-/* Mission & Vision Section */
+/* Section Divider */
 .section-divider {
-  width: 80px;
   height: 4px;
-  background-color: var(--secondary);
+  width: 60px;
+  background: linear-gradient(90deg, var(--secondary), #e6b800);
   margin-bottom: 30px;
 }
 
-.icon-circle {
-  background-color: rgba(46, 49, 146, 0.1);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  flex-shrink: 0;
+/* Council Section padding fix */
+.council-section {
+  padding-top: 60px; /* space above to prevent overlap */
+  padding-bottom: 80px;
+  background-color: var(--light-bg);
 }
 
-.mission-vision-card {
-  border: 0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  height: 100%;
-  transition: transform 0.3s ease;
-}
-
-.mission-vision-card:hover {
-  transform: translateY(-5px);
-}
-
-.check-icon {
-  color: var(--primary);
-}
-
-.arrow-icon {
-  color: var(--secondary);
-}
-
-.vision-goals {
-  background-color: rgba(46, 49, 146, 0.05);
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-/* Features Section */
-.features-section {
-  padding: 80px 0;
+/* Member cards */
+.member-card {
+  border-radius: 12px;
   background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
 }
 
-.feature-card {
-  padding: 30px;
-  text-align: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  height: 100%;
-  border-bottom: 3px solid transparent;
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(46, 49, 146, 0.15);
 }
 
-.feature-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid var(--secondary);
+/* Member photo container */
+.member-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.feature-card:hover .feature-icon {
-  background-color: var(--secondary);
-  color: var(--dark);
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Icon colors */
+.member-photo i {
+  transition: color 0.3s ease;
 }
 
-.feature-icon {
-  font-size: 2.5rem;
+.member-card:hover .member-photo i {
   color: var(--primary);
-  margin-bottom: 20px;
-  background-color: rgba(46, 49, 146, 0.1);
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
-  display: inline-block;
 }
 
-/* CTA Section */
-.text-center.bg-primary {
-  background-color: var(--primary) !important;
-  color: white !important;
-  padding: 4rem 0;
+/* Member text */
+.member-card h4,
+.member-card h5 {
+  color: var(--primary);
+  margin-bottom: 0.3rem;
 }
 
-.text-center.bg-primary h2 {
-  font-weight: 700;
+.member-card p {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0;
 }
 
-.text-center.bg-primary .btn-light {
-  border-radius: 50px;
-  padding: 12px 40px;
-  font-weight: 700;
-  font-size: 1.25rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Council achievements icons */
+.achievement-icon {
+  color: var(--secondary);
+  margin-right: 10px;
 }
 
-.text-center.bg-primary .btn-light:hover {
-  background-color: var(--secondary);
-  color: var(--dark);
+/* Cards inside organizational structure */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Responsive Tweaks */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 10px 0;
-  }
+.card:hover {
+  box-shadow: 0 16px 40px rgba(46, 49, 146, 0.15);
+}
 
-  .nav-link {
-    text-align: center;
-    margin: 5px 0;
-  }
+/* Organizational chart */
+.org-chart {
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
 
-  .auth-btn {
-    display: block;
-    margin: 10px auto;
-    width: 200px;
-    text-align: center;
+/* Responsive */
+@media (max-width: 768px) {
+  .member-card {
+    margin-bottom: 30px;
   }
+}
 
-  .hero-section {
-    padding: 100px 20px;
-  }
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+}
 
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }

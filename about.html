@@ -1,196 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Youth Governance System</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/index.css">
-  <style>
-    :root {
-      --primary: #0d6efd;
-      --secondary: #6c757d;
-    }
-    
-    .navbar {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .sk-logo {
-      height: 40px;
-    }
-    
-    .auth-btn {
-      font-weight: 600;
-    }
-    
-    .signup-btn {
-      background-color: var(--primary);
-      color: white !important;
-      border-radius: 20px;
-      padding: 8px 20px !important;
-    }
-    
-    .section-divider {
-      height: 4px;
-      width: 60px;
-      background-color: var(--primary);
-      margin-bottom: 30px;
-    }
-    
-    .about-hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/about-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-    
-    .team-member-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #f8f9fa;
-    }
-    
-    .timeline {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: var(--primary);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-    
-    .timeline-container {
-      padding: 10px 40px;
-      position: relative;
-      background-color: inherit;
-      width: 50%;
-    }
-    
-    .timeline-container::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -12px;
-      background-color: white;
-      border: 4px solid var(--primary);
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    
-    .left {
-      left: 0;
-    }
-    
-    .right {
-      left: 50%;
-    }
-    
-    .left::before {
-      content: " ";
-      height: 0;
-      position: absolute;
-      top: 22px;
-      width: 0;
-      z-index: 1;
-      right: 30px;
-      border: medium solid #f8f9fa;
-      border-width: 10px 0 10px 10px;
-      border-color: transparent transparent transparent #f8f9fa;
-    }
-    
-    .right::before {
-      content: " ";
-      height: 0;
-      position: absolute;
-      top: 22px;
-      width: 0;
-      z-index: 1;
-      left: 30px;
-      border: medium solid #f8f9fa;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent #f8f9fa transparent transparent;
-    }
-    
-    .right::after {
-      left: -13px;
-    }
-    
-    .timeline-content {
-      padding: 20px 30px;
-      background-color: #f8f9fa;
-      position: relative;
-      border-radius: 6px;
-    }
-    
-    @media screen and (max-width: 600px) {
-      .timeline::after {
-        left: 31px;
-      }
-      
-      .timeline-container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-      
-      .timeline-container::before {
-        left: 60px;
-        border: medium solid #f8f9fa;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #f8f9fa transparent transparent;
-      }
-      
-      .left::after, .right::after {
-        left: 18px;
-      }
-      
-      .right {
-        left: 0%;
-      }
-    }
-  </style>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top"
+    aria-label="Primary navigation"
+  >
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/temp-lydo.png" alt="LYDO Logo">
+      <a class="navbar-brand" href="#" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="lydo-council.html">LYDO Council</a></li>
-          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
-          <li class="nav-item"><a class="nav-link" href="programs.html">Programs & Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="kk-profiling.html">KK Profiling</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lydo-council.html">LYDO Council</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sk-official.html">SK Official</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Programs &amp; Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">KK Profiling</a>
+          </li>
         </ul>
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link auth-btn signin-btn" href="#">Sign In</a></li>
-          <li class="nav-item"><a class="nav-link auth-btn signup-btn" href="#">Sign Up</a></li>
+          <li class="nav-item">
+            <a
+              class="nav-link auth-btn signin-btn"
+              href="#signup"
+              aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link auth-btn signup-btn"
+              href="#signup"
+              aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
           <li class="nav-item ms-3 d-none d-lg-block">
-            <a href="#">
-              <img src="img/sk.png" alt="Youth Logo" class="sk-logo">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
             </a>
           </li>
         </ul>
@@ -200,9 +82,14 @@
 
   <!-- Hero Section -->
   <section class="about-hero">
-    <div class="container">
-      <h1 class="display-4 fw-bold mb-4">About Our Youth Governance Initiative</h1>
-      <p class="lead mb-5">Empowering the youth of San Jose, Batangas through inclusive participation and leadership development</p>
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-4">
+        About Our Youth Governance Initiative
+      </h1>
+      <p class="lead mb-5">
+        Empowering the youth of San Jose, Batangas through inclusive
+        participation and leadership development
+      </p>
       <a href="#learn-more" class="btn btn-light btn-lg">Learn More</a>
     </div>
   </section>
@@ -214,25 +101,55 @@
         <div class="col-lg-8 text-center">
           <h2 class="fw-bold mb-3">Who We Are</h2>
           <div class="section-divider mx-auto"></div>
-          <p class="lead">LYDO (Local Youth Development Office) is the central coordinating body for youth initiatives in San Jose, Batangas. We work in partnership with the Sangguniang Kabataan (SK) to create meaningful opportunities for youth participation in governance and community development.</p>
+          <p class="lead">
+            LYDO (Local Youth Development Office) is the central coordinating
+            body for youth initiatives in San Jose, Batangas. We work in
+            partnership with the Sangguniang Kabataan (SK) to create meaningful
+            opportunities for youth participation in governance and community
+            development.
+          </p>
         </div>
       </div>
-      
+
       <div class="row g-4 align-items-center mb-5">
         <div class="col-lg-6">
           <h3 class="fw-bold mb-4">Our Commitment</h3>
-          <p>The Youth Governance System of San Jose, Batangas is committed to fostering an environment where young people can thrive as active citizens and future leaders. We believe in the power of youth voices and their potential to drive positive change in our community.</p>
+          <p>
+            The Youth Governance System of San Jose, Batangas is committed to
+            fostering an environment where young people can thrive as active
+            citizens and future leaders. We believe in the power of youth voices
+            and their potential to drive positive change in our community.
+          </p>
           <p>Through our integrated approach to youth development, we aim to:</p>
-          <ul>
-            <li>Provide platforms for meaningful youth participation in local governance</li>
-            <li>Develop leadership skills among young people through mentorship and training</li>
-            <li>Support youth-led initiatives that address community challenges</li>
-            <li>Ensure transparent and accountable management of youth development resources</li>
-            <li>Create connections between youth groups across all barangays in San Jose</li>
+          <ul class="custom-list">
+            <li>
+              Provide platforms for meaningful youth participation in local
+              governance
+            </li>
+            <li>
+              Develop leadership skills among young people through mentorship
+              and training
+            </li>
+            <li>
+              Support youth-led initiatives that address community challenges
+            </li>
+            <li>
+              Ensure transparent and accountable management of youth
+              development resources
+            </li>
+            <li>
+              Create connections between youth groups across all barangays in
+              San Jose
+            </li>
           </ul>
         </div>
         <div class="col-lg-6">
-          <img src="/api/placeholder/600/400" alt="Youth meeting" class="img-fluid rounded shadow">
+          <img
+            src="img/Pic.A.png"
+            alt="Youth meeting"
+            class="img-fluid rounded shadow"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
@@ -245,45 +162,68 @@
         <div class="col-lg-8 text-center">
           <h2 class="fw-bold mb-3">Our Journey</h2>
           <div class="section-divider mx-auto"></div>
-          <p class="lead">Since our establishment, we have continually evolved to better serve the youth of San Jose, Batangas.</p>
+          <p class="lead">
+            Since our establishment, we have continually evolved to better serve
+            the youth of San Jose, Batangas.
+          </p>
         </div>
       </div>
-      
+
       <div class="timeline">
         <div class="timeline-container left">
           <div class="timeline-content">
             <h4>2019</h4>
-            <p>Establishment of the Youth Governance Framework in San Jose, Batangas with the creation of the Local Youth Development Office (LYDO).</p>
+            <p>
+              Establishment of the Youth Governance Framework in San Jose,
+              Batangas with the creation of the Local Youth Development Office
+              (LYDO).
+            </p>
           </div>
         </div>
         <div class="timeline-container right">
           <div class="timeline-content">
             <h4>2020</h4>
-            <p>Launch of the first Youth Participatory Budgeting process, enabling young people to directly influence allocation of resources for youth programs.</p>
+            <p>
+              Launch of the first Youth Participatory Budgeting process, enabling
+              young people to directly influence allocation of resources for
+              youth programs.
+            </p>
           </div>
         </div>
         <div class="timeline-container left">
           <div class="timeline-content">
             <h4>2021</h4>
-            <p>Implementation of the Barangay Youth Council system across all 33 barangays of San Jose.</p>
+            <p>
+              Implementation of the Barangay Youth Council system across all 33
+              barangays of San Jose.
+            </p>
           </div>
         </div>
         <div class="timeline-container right">
           <div class="timeline-content">
             <h4>2022</h4>
-            <p>Development of the Youth Governance Digital Platform to enhance transparency and youth engagement.</p>
+            <p>
+              Development of the Youth Governance Digital Platform to enhance
+              transparency and youth engagement.
+            </p>
           </div>
         </div>
         <div class="timeline-container left">
           <div class="timeline-content">
             <h4>2023</h4>
-            <p>Recognition as one of the most youth-friendly municipalities in CALABARZON Region.</p>
+            <p>
+              Recognition as one of the most youth-friendly municipalities in
+              CALABARZON Region.
+            </p>
           </div>
         </div>
         <div class="timeline-container right">
           <div class="timeline-content">
             <h4>2024</h4>
-            <p>Implementation of the comprehensive Youth Leadership Development Program and expansion of youth governance initiatives.</p>
+            <p>
+              Implementation of the comprehensive Youth Leadership Development
+              Program and expansion of youth governance initiatives.
+            </p>
           </div>
         </div>
       </div>
@@ -300,12 +240,17 @@
           <p class="lead">The dedicated team behind our youth governance initiatives</p>
         </div>
       </div>
-      
+
       <div class="row g-4 justify-content-center">
         <!-- Team Member 1 -->
         <div class="col-md-4 col-lg-3">
           <div class="text-center">
-            <img src="/api/placeholder/150/150" alt="Team Member" class="team-member-img mb-3">
+            <img
+              src="img/SK0.png"
+              alt="Maria Santos, LYDO Head"
+              class="team-member-img mb-3"
+              loading="lazy"
+            />
             <h4 class="fw-bold">Maria Santos</h4>
             <p class="text-muted">LYDO Head</p>
             <div class="social-icons">
@@ -315,11 +260,16 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Team Member 2 -->
         <div class="col-md-4 col-lg-3">
           <div class="text-center">
-            <img src="/api/placeholder/150/150" alt="Team Member" class="team-member-img mb-3">
+            <img
+              src="img/SK1.png"
+              alt="Juan Reyes, Program Coordinator"
+              class="team-member-img mb-3"
+              loading="lazy"
+            />
             <h4 class="fw-bold">Juan Reyes</h4>
             <p class="text-muted">Program Coordinator</p>
             <div class="social-icons">
@@ -329,11 +279,16 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Team Member 3 -->
         <div class="col-md-4 col-lg-3">
           <div class="text-center">
-            <img src="/api/placeholder/150/150" alt="Team Member" class="team-member-img mb-3">
+            <img
+              src="img/SK3.png"
+              alt="Elena Gomez, Youth Engagement Officer"
+              class="team-member-img mb-3"
+              loading="lazy"
+            />
             <h4 class="fw-bold">Elena Gomez</h4>
             <p class="text-muted">Youth Engagement Officer</p>
             <div class="social-icons">
@@ -343,11 +298,16 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Team Member 4 -->
         <div class="col-md-4 col-lg-3">
           <div class="text-center">
-            <img src="/api/placeholder/150/150" alt="Team Member" class="team-member-img mb-3">
+            <img
+              src="img/SK2.png"
+              alt="Carlos Lim, Digital Platform Manager"
+              class="team-member-img mb-3"
+              loading="lazy"
+            />
             <h4 class="fw-bold">Carlos Lim</h4>
             <p class="text-muted">Digital Platform Manager</p>
             <div class="social-icons">
@@ -368,7 +328,10 @@
         <div class="col-lg-8 text-center">
           <h2 class="fw-bold mb-3">Get in Touch</h2>
           <div class="section-divider mx-auto"></div>
-          <p class="lead mb-5">We'd love to hear from you! Reach out to us with any questions or suggestions.</p>
+          <p class="lead mb-5">
+            We'd love to hear from you! Reach out to us with any questions or
+            suggestions.
+          </p>
         </div>
       </div>
       <div class="row g-4">
@@ -377,21 +340,25 @@
             <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
           </div>
           <h4 class="fw-bold">Visit Us</h4>
-          <p>Youth Development Office<br>San Jose Municipal Hall<br>San Jose, Batangas</p>
+          <p>
+            Youth Development Office<br />
+            San Jose Municipal Hall<br />
+            San Jose, Batangas
+          </p>
         </div>
         <div class="col-md-4 text-center">
           <div class="mb-3">
             <i class="fas fa-phone fa-3x text-primary"></i>
           </div>
           <h4 class="fw-bold">Call Us</h4>
-          <p>+63 (43) 123 4567<br>Monday - Friday: 8am - 5pm</p>
+          <p>+63 (43) 123 4567<br />Monday - Friday: 8am - 5pm</p>
         </div>
         <div class="col-md-4 text-center">
           <div class="mb-3">
             <i class="fas fa-envelope fa-3x text-primary"></i>
           </div>
           <h4 class="fw-bold">Email Us</h4>
-          <p>lydo@sanjose.gov.ph<br>info@lydosanjose.ph</p>
+          <p>lydo@sanjose.gov.ph<br />info@lydosanjose.ph</p>
         </div>
       </div>
     </div>

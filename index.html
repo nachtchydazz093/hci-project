@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Youth Governance System</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top"
+    aria-label="Primary navigation"
+  >
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="img/temp-lydo.png" alt="LYDO Logo">
+      <a class="navbar-brand" href="#" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="lydo-council.html">LYDO Council</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">SK Official</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Programs & Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">KK Profiling</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lydo-council.html">LYDO Council</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sk-official.html">SK Official</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Programs &amp; Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">KK Profiling</a>
+          </li>
         </ul>
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link auth-btn signin-btn" href="#">Sign In</a></li>
-          <li class="nav-item"><a class="nav-link auth-btn signup-btn" href="#">Sign Up</a></li>
+          <li class="nav-item">
+            <a
+              class="nav-link auth-btn signin-btn"
+              href="#signup"
+              aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link auth-btn signup-btn"
+              href="#signup"
+              aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
           <li class="nav-item ms-3 d-none d-lg-block">
-            <a href="#">
-              <img src="img/sk.png" alt="Youth Logo" class="sk-logo">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
             </a>
           </li>
         </ul>
@@ -41,19 +82,31 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="container hero-content">
+    <div class="container hero-content text-center">
+      <h1>Empowering the Youth for a Better Tomorrow</h1>
+      <p class="lead mb-4">
+        Join our movement to foster youth leadership and active community
+        participation.
+      </p>
+      <a href="#signup" class="btn btn-cta">Get Started</a>
+    </div>
   </section>
 
   <!-- Mission & Vision Section -->
-  <section class="py-5" style="background-color: #f8f9fa;">
+  <section
+    id="mission-vision"
+    class="py-5"
+    style="background-color: #f8f9fa"
+    aria-label="Mission and Vision"
+  >
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-lg-6 text-center">
-          <h2 class="fw-bold mb-4" style="color: var(--primary);">Our Mission & Vision</h2>
+          <h2 class="fw-bold mb-4" style="color: var(--primary)">Mission & Vision</h2>
           <div class="section-divider mx-auto"></div>
         </div>
       </div>
-      
+
       <div class="row g-4">
         <!-- Mission -->
         <div class="col-lg-6">
@@ -63,18 +116,32 @@
                 <div class="icon-circle">
                   <i class="fas fa-bullseye fa-2x check-icon"></i>
                 </div>
-                <h3 class="fw-bold mb-0">Our Mission</h3>
+                <h3 class="fw-bold mb-0">Mission</h3>
               </div>
-              <p class="lead mb-4">To empower the youth of San Jose, Batangas through inclusive governance platforms that enable active civic participation, develop leadership skills, and provide avenues for innovation and community development.</p>
+              <p class="lead mb-4">
+                To ignite youth involvement in public and civic affairs that ought
+                to inculcate patriotism, nationalism, and other desirable values in
+                the youth. Empowering them to play a vital role in their own
+                development as well as in our community.
+              </p>
               <ul class="list-unstyled">
-                <li class="mb-2"><i class="fas fa-check-circle me-2 check-icon"></i> Foster meaningful youth engagement in governance</li>
-                <li class="mb-2"><i class="fas fa-check-circle me-2 check-icon"></i> Develop future leaders through mentorship and programs</li>
-                <li><i class="fas fa-check-circle me-2 check-icon"></i> Create sustainable solutions for community challenges</li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Foster meaningful
+                  youth engagement in governance
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Develop future
+                  leaders through mentorship and programs
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Create sustainable
+                  solutions for community challenges
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        
+
         <!-- Vision -->
         <div class="col-lg-6">
           <div class="card mission-vision-card h-100">
@@ -83,15 +150,28 @@
                 <div class="icon-circle">
                   <i class="fas fa-eye fa-2x check-icon"></i>
                 </div>
-                <h3 class="fw-bold mb-0">Our Vision</h3>
+                <h3 class="fw-bold mb-0">Vision</h3>
               </div>
-              <p class="lead mb-4">A dynamic and progressive San Jose, Batangas where youth are empowered change-makers, actively contributing to transparent governance and sustainable community development.</p>
+              <p class="lead mb-4">
+                To establish adequate, effective, responsive, and enabling mechanisms
+                and support systems that will empower the youth and ensure their
+                meaningful participation in governance.
+              </p>
               <div class="vision-goals">
                 <h5 class="fw-bold mb-3">By 2030, we envision:</h5>
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-arrow-right me-2 arrow-icon"></i> 100% youth participation in community planning</li>
-                  <li class="mb-2"><i class="fas fa-arrow-right me-2 arrow-icon"></i> Youth-led initiatives in all barangays</li>
-                  <li><i class="fas fa-arrow-right me-2 arrow-icon"></i> Recognition as a model for youth governance in the Philippines</li>
+                  <li class="mb-2">
+                    <i class="fas fa-arrow-right me-2 arrow-icon"></i> 100% youth
+                    participation in community planning
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-arrow-right me-2 arrow-icon"></i> Youth-led
+                    initiatives in all barangays
+                  </li>
+                  <li>
+                    <i class="fas fa-arrow-right me-2 arrow-icon"></i> Recognition as
+                    a model for youth governance in the Philippines
+                  </li>
                 </ul>
               </div>
             </div>
@@ -101,13 +181,68 @@
     </div>
   </section>
 
+  <!-- Mandate Section -->
+  <section
+    class="py-5"
+    style="background-color: #f8f9fa"
+    aria-label="Mandate"
+  >
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-6 text-center">
+          <h2 class="fw-bold mb-4" style="color: var(--primary)">Mandate</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card mission-vision-card h-100">
+            <div class="card-body p-4 p-lg-5">
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon-circle">
+                  <i class="fas fa-gavel fa-2x check-icon"></i>
+                </div>
+                <h3 class="fw-bold mb-0">Our Mandate</h3>
+              </div>
+              <p class="lead mb-4">
+                Implement youth empowerment and development programs in accordance
+                with Republic Act No. 10742, as amended by Republic Act No. 11768.
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Coordinate youth
+                  development programs and activities
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Protect and
+                  promote the rights of the youth
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Facilitate youth
+                  leadership and civic engagement
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2 check-icon"></i> Ensure alignment
+                  with national and local youth policies
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
-  <section class="features-section">
+  <section class="features-section" aria-label="Features">
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center">
           <h2 class="fw-bold mb-3">How We Empower Youth</h2>
-          <p class="text-muted">Discover the key pillars of our governance platform</p>
+          <p class="text-muted">
+            Discover the key pillars of our governance platform
+          </p>
         </div>
       </div>
       <div class="row g-4">
@@ -118,10 +253,13 @@
               <i class="fas fa-users"></i>
             </div>
             <h3>Community Building</h3>
-            <p>Connect with like-minded youth leaders and participate in building stronger communities through collaboration.</p>
+            <p>
+              Connect with like-minded youth leaders and participate in building
+              stronger communities through collaboration.
+            </p>
           </div>
         </div>
-        
+
         <!-- Feature 2 -->
         <div class="col-md-4">
           <div class="feature-card">
@@ -129,10 +267,13 @@
               <i class="fas fa-lightbulb"></i>
             </div>
             <h3>Innovation Hub</h3>
-            <p>Share your ideas and transform them into impactful projects that address local challenges and needs.</p>
+            <p>
+              Share your ideas and transform them into impactful projects that
+              address local challenges and needs.
+            </p>
           </div>
         </div>
-        
+
         <!-- Feature 3 -->
         <div class="col-md-4">
           <div class="feature-card">
@@ -140,13 +281,40 @@
               <i class="fas fa-chart-line"></i>
             </div>
             <h3>Transparent Governance</h3>
-            <p>Access real-time updates on youth programs, budget allocation, and project implementation status.</p>
+            <p>
+              Access real-time updates on youth programs, budget allocation, and
+              project implementation status.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Call to Action Section -->
+  <section
+    class="text-center py-5 bg-primary text-white"
+    aria-label="Call to action"
+  >
+    <div class="container">
+      <h2>Ready to Empower Yourself?</h2>
+      <a href="#signup" class="btn btn-light btn-lg mt-3">Join Now</a>
+    </div>
+  </section>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: Smooth scroll script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

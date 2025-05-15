@@ -1,3 +1,4 @@
+/* Variables */
 :root {
   --primary: #2e3192;
   --secondary: #ffc107;
@@ -7,8 +8,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--dark);
   scroll-behavior: smooth;
 }
@@ -176,139 +177,130 @@ body {
   }
 }
 
-/* Mission & Vision Section */
+/* Section Divider */
 .section-divider {
   width: 80px;
   height: 4px;
-  background-color: var(--secondary);
+  background: linear-gradient(90deg, var(--secondary), #e6b800);
   margin-bottom: 30px;
 }
 
-.icon-circle {
-  background-color: rgba(46, 49, 146, 0.1);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+/* Custom List Styling */
+.card.text-center {
+  min-height: 320px; /* Adjust as needed */
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  flex-shrink: 0;
+  padding: 20px;
 }
 
-.mission-vision-card {
-  border: 0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  height: 100%;
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--primary);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.custom-list li:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.table-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+#searchInput {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+
+/* Team Member Images */
+.team-member-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.mission-vision-card:hover {
-  transform: translateY(-5px);
+.team-member-img:hover {
+  transform: scale(1.05);
 }
 
-.check-icon {
-  color: var(--primary);
+/* Phone Directory Table */
+table {
+  font-size: 0.95rem;
 }
 
-.arrow-icon {
+.table-primary th {
+  background-color: var(--primary) !important;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
   color: var(--secondary);
 }
 
-.vision-goals {
-  background-color: rgba(46, 49, 146, 0.05);
-  border-radius: 8px;
-  padding: 1.5rem;
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Features Section */
-.features-section {
-  padding: 80px 0;
-  background-color: white;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .team-member-img {
+    width: 120px;
+    height: 120px;
+  }
 
-.feature-card {
-  padding: 30px;
-  text-align: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  height: 100%;
-  border-bottom: 3px solid transparent;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid var(--secondary);
-}
-
-.feature-card:hover .feature-icon {
-  background-color: var(--secondary);
-  color: var(--dark);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.feature-icon {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 20px;
-  background-color: rgba(46, 49, 146, 0.1);
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-/* CTA Section */
-.text-center.bg-primary {
-  background-color: var(--primary) !important;
-  color: white !important;
-  padding: 4rem 0;
-}
-
-.text-center.bg-primary h2 {
-  font-weight: 700;
-}
-
-.text-center.bg-primary .btn-light {
-  border-radius: 50px;
-  padding: 12px 40px;
-  font-weight: 700;
-  font-size: 1.25rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.text-center.bg-primary .btn-light:hover {
-  background-color: var(--secondary);
-  color: var(--dark);
-}
-
-/* Responsive Tweaks */
-@media (max-width: 992px) {
   .navbar {
     padding: 10px 0;
   }
 
-  .nav-link {
-    text-align: center;
-    margin: 5px 0;
-  }
-
   .auth-btn {
-    display: block;
-    margin: 10px auto;
-    width: 200px;
-    text-align: center;
+    margin-top: 10px;
   }
 
-  .hero-section {
-    padding: 100px 20px;
-  }
-
-  .hero-section h1 {
+  .sk-hero h1 {
     font-size: 2.5rem;
   }
 }
