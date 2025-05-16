@@ -1,0 +1,330 @@
+/* Variables */
+:root {
+  --primary: #2e3192;
+  --secondary: #ffc107;
+  --accent: #ff5722;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --input-border-radius: 8px;
+}
+
+body {
+  background-color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  backdrop-filter: saturate(180%) blur(10px);
+  transition: background-color 0.3s ease;
+  z-index: 1030;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-brand img,
+.nav-logo-right img {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo-left img {
+  height: 45px;
+}
+
+.navbar-brand img:hover,
+.nav-logo-right img:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  color: var(--primary) !important;
+  font-weight: 600;
+  margin: 0 5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Auth Buttons */
+.auth-btn {
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.signin-btn {
+  color: var(--primary) !important;
+  border: 2px solid var(--primary);
+}
+
+.signin-btn:hover {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+.signup-btn {
+  background-color: var(--primary);
+  color: white !important;
+  border: 2px solid var(--primary);
+}
+
+.signup-btn:hover {
+  background-color: transparent;
+  color: var(--primary) !important;
+}
+
+.signin-btn:hover::after,
+.signup-btn:hover::after {
+  width: 0 !important;
+}
+
+
+.sk-logo {
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* Auth Buttons */
+.auth-btn {
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.signin-btn {
+  color: var(--primary) !important;
+  border: 2px solid var(--primary);
+}
+
+.signin-btn:hover {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+.signup-btn {
+  background-color: var(--primary);
+  color: white !important;
+  border: 2px solid var(--primary);
+}
+
+.signup-btn:hover {
+  background-color: transparent;
+  color: var(--primary) !important;
+}
+
+.signin-btn:hover::after,
+.signup-btn:hover::after {
+  width: 0 !important;
+}
+
+
+/* Form container */
+.container-form {
+  max-width: 850px;
+  margin: 3rem auto 4rem;
+  padding: 2.5rem 3.5rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(46, 49, 146, 0.12);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+.container-form:hover {
+  box-shadow: 0 15px 45px rgba(46, 49, 146, 0.18);
+}
+
+/* Form Title */
+.form-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* Section Headings */
+.section-heading {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.75rem;
+  border-bottom: 3px solid var(--secondary);
+  padding-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+
+/* Name row (first, middle, last, suffix) layout */
+.name-row {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.name-row > div {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+
+/* Form label */
+.form-label {
+  font-weight: 600;
+  color: var(--dark);
+  display: block;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+/* Inputs, selects, and textareas */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 18px;
+  border: 2.5px solid #ddd;
+  border-radius: var(--input-border-radius);
+  font-size: 1.05rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  font-weight: 500;
+  color: var(--dark);
+  background-color: #fff;
+  letter-spacing: 0.01em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+/* Validation feedback */
+.invalid-feedback {
+  display: none;
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+
+/* Show invalid feedback when input is invalid */
+input:invalid ~ .invalid-feedback,
+select:invalid ~ .invalid-feedback,
+textarea:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+/* Radio and Checkbox groups */
+.form-check-inline {
+  margin-right: 1.75rem;
+}
+
+.form-check-input {
+  cursor: pointer;
+  transform: scale(1.25);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.form-check-label {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Row layout for date and age */
+.row.g-3 {
+  margin-bottom: 1.75rem;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  padding: 16px 35px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 2.5rem auto 0;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(46, 49, 146, 0.25);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(255, 87, 34, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .name-row {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary);
+}

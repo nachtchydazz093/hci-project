@@ -1,0 +1,275 @@
+:root {
+  --primary: #2e3192;
+  --secondary: #ffc107;
+  --light-bg: #f8f9fa;
+  --success: #198754;
+  --danger: #dc3545;
+  --input-bg: #fff;
+  --input-border: #ced4da;
+  --input-border-focus: var(--primary);
+  --input-placeholder: #6c757d;
+  --btn-bg-hover: #244076;
+}
+
+body {
+  background-color: var(--light-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand img {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  color: var(--primary) !important;
+  font-weight: 600;
+  margin: 0 8px;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary) !important;
+}
+
+.auth-btn {
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.signin-btn {
+  color: var(--primary) !important;
+  border: 2px solid var(--primary);
+}
+
+.signin-btn:hover {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+.signup-btn {
+  background-color: var(--primary);
+  color: white !important;
+  border: 2px solid var(--primary);
+}
+
+.signup-btn:hover {
+  background-color: transparent;
+  color: var(--primary) !important;
+}
+
+.sk-logo {
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+}
+
+/* Sign-in Form */
+.signin-container {
+  max-width: 440px;
+  padding: 2rem 1.5rem 3rem;
+  margin: 3rem auto 4rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(46, 49, 146, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.signin-container:hover,
+.signin-container:focus-within {
+  box-shadow: 0 12px 28px rgba(46, 49, 146, 0.25);
+}
+
+.signin-form h2 {
+  font-weight: 800;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+/* Form Controls */
+.form-control {
+  background-color: var(--input-bg);
+  border: 1.8px solid var(--input-border);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #212529;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1;
+}
+
+.form-control:focus {
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 8px rgba(46, 49, 146, 0.3);
+  outline: none;
+}
+
+/* Validation States */
+input:valid {
+  border-color: var(--success);
+}
+
+input:invalid {
+  border-color: var(--danger);
+}
+
+.is-invalid {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 6px rgba(220, 53, 69, 0.4);
+}
+
+.is-valid {
+  border-color: var(--success) !important;
+  box-shadow: 0 0 6px rgba(25, 135, 84, 0.4);
+}
+
+.invalid-feedback {
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.is-invalid + .invalid-feedback {
+  display: block;
+}
+
+/* Password Toggle Button */
+.input-group .toggle-password {
+  border: none;
+  background: transparent;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0 0.75rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  transition: color 0.3s ease;
+  border-radius: 0 8px 8px 0;
+}
+
+.input-group .toggle-password:hover,
+.input-group .toggle-password:focus {
+  color: var(--primary);
+  outline: none;
+}
+
+/* Server error */
+#serverError {
+  display: none;
+  background-color: #f8d7da;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(220, 53, 69, 0.15);
+}
+
+/* Submit Button */
+.signin-form .btn-primary {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.75rem 0;
+  border-radius: 50px;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(46, 49, 146, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.signin-form .btn-primary:hover,
+.signin-form .btn-primary:focus {
+  background-color: var(--btn-bg-hover);
+  border-color: var(--btn-bg-hover);
+  box-shadow: 0 6px 20px rgba(36, 64, 118, 0.4);
+  outline: none;
+}
+
+/* Links */
+.signin-form p {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.signin-form p a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signin-form p a:hover,
+.signin-form p a:focus {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signin-container {
+    padding: 2rem 1.2rem 3rem;
+    margin: 2rem 1rem 3rem;
+  }
+
+  .signin-form h2 {
+    font-size: 1.75rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+  }
+
+  .signin-form .btn-primary {
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}

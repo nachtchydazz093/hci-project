@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KK Profiling Survey - Part 2</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/kk-profiling-survey-2.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm"
+    aria-label="Primary navigation"
+  >
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" class="nav-logo" />
+        <span class="ms-2 fw-bold text-primary">LYDO San Jose</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="lydo-council.html">LYDO Council</a></li>
+          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Projects, Programs and Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="kk-profiling.html">KK Profiling Survey</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link auth-btn signin-btn" href="sign-in.html" aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link auth-btn signup-btn" href="sign-up.html" aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item ms-3 d-none d-lg-block">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="kk-container my-5">
+    <h1 class="kk-title mb-4">KK Profiling Survey - Demographic Characters</h1>
+    <form id="kkSurveyForm" aria-describedby="formHelp" novalidate>
+
+      <!-- III. Socio-Demographic Profile -->
+      <section class="mb-4">
+        <h4 class="mb-3">III. Socio-Demographic Profile</h4>
+
+        <!-- Civil Status -->
+        <label for="civilStatus" class="form-label">Civil Status</label>
+        <select class="form-select mb-3" id="civilStatus" name="civilStatus" required>
+          <option value="" disabled selected>Select Civil Status</option>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Widowed</option>
+          <option>Divorced</option>
+          <option>Separated</option>
+          <option>Annulled</option>
+          <option>Live-in</option>
+          <option>Unknown</option>
+        </select>
+
+        <!-- Youth Age Group (readonly, auto-calculated) -->
+        <label for="youthAgeGroup" class="form-label">Youth Age Group</label>
+        <input type="text" class="form-control mb-3" id="youthAgeGroup" name="youthAgeGroup" readonly placeholder="Auto-calculated based on birthdate" />
+
+        <!-- Religion -->
+        <label for="religion" class="form-label">Religion</label>
+        <input type="text" class="form-control mb-3" id="religion" name="religion" placeholder="Enter Religion" />
+
+        <!-- Languages Spoken (multi-select) -->
+        <label for="languagesSpoken" class="form-label">Languages Spoken (comma separated)</label>
+        <input type="text" class="form-control mb-3" id="languagesSpoken" name="languagesSpoken" placeholder="e.g. Tagalog, English, Ilocano" />
+
+        <!-- Indigenous Group Affiliation -->
+        <label class="form-label">Indigenous Group Affiliation</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="indigenousAffiliation" id="indigenousYes" value="Yes" />
+          <label class="form-check-label" for="indigenousYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="indigenousAffiliation" id="indigenousNo" value="No" />
+          <label class="form-check-label" for="indigenousNo">No</label>
+        </div>
+        <input type="text" class="form-control mb-3 d-none" id="indigenousGroupSpecify" name="indigenousGroupSpecify" placeholder="If Yes, specify Indigenous Group" />
+      </section>
+
+      <!-- IV. Household Profile -->
+      <section class="mb-4">
+        <h4 class="mb-3">IV. Household Profile</h4>
+
+        <label class="form-label">Are you the household head?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="householdHead" id="householdHeadYes" value="Yes" />
+          <label class="form-check-label" for="householdHeadYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="householdHead" id="householdHeadNo" value="No" />
+          <label class="form-check-label" for="householdHeadNo">No</label>
+        </div>
+
+        <label for="householdMembers" class="form-label">Number of Household Members</label>
+        <input type="number" class="form-control" id="householdMembers" name="householdMembers" placeholder="Enter Number" min="0" />
+      </section>
+
+      <!-- V. Educational Background -->
+      <section class="mb-4">
+        <h4 class="mb-3">V. Educational Background</h4>
+
+        <label for="highestEducationalAttainment" class="form-label">Highest Educational Attainment</label>
+        <select class="form-select mb-3" id="highestEducationalAttainment" name="highestEducationalAttainment" required>
+          <option value="" disabled selected>Select</option>
+          <option>No Formal Education</option>
+          <option>Elementary Level</option>
+          <option>Elementary Graduate</option>
+          <option>High School Level</option>
+          <option>High School Graduate</option>
+          <option>Senior High School Level</option>
+          <option>Senior High School Graduate</option>
+          <option>Vocational Graduate</option>
+          <option>College Level</option>
+          <option>College Graduate</option>
+          <option>Master's Level</option>
+          <option>Master's Graduate</option>
+          <option>Doctorate Level</option>
+          <option>Doctorate Graduate</option>
+        </select>
+
+        <label for="currentlyInSchool" class="form-label">Are you currently enrolled in school?</label>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="currentlyInSchool" id="inSchoolYes" value="Yes" />
+          <label class="form-check-label" for="inSchoolYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="currentlyInSchool" id="inSchoolNo" value="No" />
+          <label class="form-check-label" for="inSchoolNo">No</label>
+        </div>
+
+        <div id="schoolDetails" class="d-none">
+          <label for="schoolName" class="form-label">Name of School</label>
+          <input type="text" class="form-control mb-3" id="schoolName" name="schoolName" placeholder="Enter School Name" />
+
+          <label for="schoolAddress" class="form-label">School Address</label>
+          <input type="text" class="form-control mb-3" id="schoolAddress" name="schoolAddress" placeholder="Enter School Address" />
+
+          <label for="schoolType" class="form-label">School Type</label>
+          <select class="form-select mb-3" id="schoolType" name="schoolType">
+            <option value="" disabled selected>Select</option>
+            <option>Public</option>
+            <option>Private</option>
+          </select>
+
+          <label for="scholarshipBeneficiary" class="form-label">Scholarship Beneficiary?</label>
+          <div class="form-check form-check-inline mb-3">
+            <input class="form-check-input" type="radio" name="scholarshipBeneficiary" id="scholarshipYes" value="Yes" />
+            <label class="form-check-label" for="scholarshipYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline mb-3">
+            <input class="form-check-input" type="radio" name="scholarshipBeneficiary" id="scholarshipNo" value="No" />
+            <label class="form-check-label" for="scholarshipNo">No</label>
+          </div>
+
+          <input type="text" class="form-control d-none" id="scholarshipDetails" name="scholarshipDetails" placeholder="If yes, specify scholarship" />
+        </div>
+      </section>
+
+      <!-- VI. Youth Classification -->
+      <section class="mb-4">
+        <h4 class="mb-3">VI. Youth Classification</h4>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="inSchoolYouth" name="youthClassification" value="In School Youth" />
+          <label class="form-check-label" for="inSchoolYouth">In School Youth</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="outSchoolYouth" name="youthClassification" value="Out of School Youth" />
+          <label class="form-check-label" for="outSchoolYouth">Out of School Youth</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="workingYouth" name="youthClassification" value="Working Youth" />
+          <label class="form-check-label" for="workingYouth">Working Youth</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="personWithDisability" name="youthClassification" value="Person with Disability" />
+          <label class="form-check-label" for="personWithDisability">Person with Disability</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="childrenInConflict" name="youthClassification" value="Children in Conflict with Law" />
+          <label class="form-check-label" for="childrenInConflict">Children in Conflict with Law</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="indigenousPeople" name="youthClassification" value="Indigenous People" />
+          <label class="form-check-label" for="indigenousPeople">Indigenous People</label>
+        </div>
+      </section>
+
+      <!-- VII. Employment Status -->
+      <section class="mb-4">
+        <h4 class="mb-3">VII. Employment Status</h4>
+
+        <label for="employmentStatus" class="form-label">Work Status</label>
+        <select class="form-select mb-3" id="employmentStatus" name="employmentStatus" required>
+          <option value="" disabled selected>Select</option>
+          <option>Employed</option>
+          <option>Self-Employed</option>
+          <option>Unemployed</option>
+          <option>Currently Looking for a Job</option>
+          <option>Not Interested in Looking for a Job</option>
+        </select>
+
+        <div id="employmentDetails" class="d-none">
+          <label for="occupation" class="form-label">Occupation (if employed)</label>
+          <input type="text" class="form-control mb-3" id="occupation" name="occupation" placeholder="Enter Occupation" />
+
+          <label for="monthlyIncome" class="form-label">Monthly Income</label>
+          <select class="form-select mb-3" id="monthlyIncome" name="monthlyIncome">
+            <option value="" disabled selected>Select</option>
+            <option>Below Php 5,000</option>
+            <option>Php 5,001 - Php 10,000</option>
+            <option>Php 10,001 - Php 15,000</option>
+            <option>Php 15,001 - Php 20,000</option>
+            <option>Above Php 20,000</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- VIII. Health & Well-being -->
+      <section class="mb-4">
+        <h4 class="mb-3">VIII. Health & Well-being</h4>
+
+        <label class="form-label">Do you have any disability or health condition?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="disability" id="disabilityYes" value="Yes" />
+          <label class="form-check-label" for="disabilityYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="disability" id="disabilityNo" value="No" />
+          <label class="form-check-label" for="disabilityNo">No</label>
+        </div>
+
+        <input type="text" class="form-control mt-3 d-none" id="disabilityDetails" name="disabilityDetails" placeholder="If yes, specify" />
+      </section>
+
+      <!-- IX. Government Assistance Programs -->
+      <section class="mb-4">
+        <h4 class="mb-3">IX. Government Assistance Programs</h4>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assist4Ps" name="govAssistance" value="4Ps (Pantawid Pamilyang Pilipino Program)" />
+          <label class="form-check-label" for="assist4Ps">4Ps (Pantawid Pamilyang Pilipino Program)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistPhilHealth" name="govAssistance" value="PhilHealth" />
+          <label class="form-check-label" for="assistPhilHealth">PhilHealth</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistSSS" name="govAssistance" value="SSS (Social Security System)" />
+          <label class="form-check-label" for="assistSSS">SSS (Social Security System)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistGSIS" name="govAssistance" value="GSIS (Government Service Insurance System)" />
+          <label class="form-check-label" for="assistGSIS">GSIS (Government Service Insurance System)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistEduAssistance" name="govAssistance" value="Educational Assistance / Scholarships" />
+          <label class="form-check-label" for="assistEduAssistance">Educational Assistance / Scholarships</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistLivelihood" name="govAssistance" value="Livelihood Support / Training Programs" />
+          <label class="form-check-label" for="assistLivelihood">Livelihood Support / Training Programs</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistSocialPension" name="govAssistance" value="Social Pension Program" />
+          <label class="form-check-label" for="assistSocialPension">Social Pension Program</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistCovid19" name="govAssistance" value="COVID-19 Assistance Programs" />
+          <label class="form-check-label" for="assistCovid19">COVID-19 Assistance Programs</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistSeniorCitizen" name="govAssistance" value="Senior Citizen Benefits" />
+          <label class="form-check-label" for="assistSeniorCitizen">Senior Citizen Benefits</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistHousing" name="govAssistance" value="Housing Assistance (e.g., NHA, SHFC)" />
+          <label class="form-check-label" for="assistHousing">Housing Assistance (e.g., NHA, SHFC)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistDisasterRelief" name="govAssistance" value="Disaster Relief Assistance" />
+          <label class="form-check-label" for="assistDisasterRelief">Disaster Relief Assistance</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistYouthEntrepreneurship" name="govAssistance" value="Youth Entrepreneurship Program" />
+          <label class="form-check-label" for="assistYouthEntrepreneurship">Youth Entrepreneurship Program</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistAgriSupport" name="govAssistance" value="Agricultural Support Programs" />
+          <label class="form-check-label" for="assistAgriSupport">Agricultural Support Programs</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistHealthMed" name="govAssistance" value="Health and Medical Assistance" />
+          <label class="form-check-label" for="assistHealthMed">Health and Medical Assistance</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistSkillsTraining" name="govAssistance" value="Skills Training & Development (TESDA or similar)" />
+          <label class="form-check-label" for="assistSkillsTraining">Skills Training & Development (TESDA or similar)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistCashForWork" name="govAssistance" value="Cash-for-Work Programs" />
+          <label class="form-check-label" for="assistCashForWork">Cash-for-Work Programs</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="assistNone" name="govAssistance" value="None" />
+          <label class="form-check-label" for="assistNone">None</label>
+        </div>
+        <div class="form-check mt-2">
+          <input type="checkbox" class="form-check-input" id="assistOthers" name="govAssistance" value="Others" />
+          <label class="form-check-label" for="assistOthers">Others (please specify)</label>
+          <input type="text" class="form-control mt-2 d-none" id="govAssistOtherText" name="govAssistOtherText" placeholder="Please specify other assistance" />
+        </div>
+      </section>
+
+      <!-- X. Voter Registration and Civic Participation -->
+      <section class="mb-4">
+        <h4 class="mb-3">X. Voter Registration and Civic Participation</h4>
+
+        <label class="form-label">Registered SK Voter?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="registeredSKVoter" id="registeredSKVoterYes" value="Yes" />
+          <label class="form-check-label" for="registeredSKVoterYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="registeredSKVoter" id="registeredSKVoterNo" value="No" />
+          <label class="form-check-label" for="registeredSKVoterNo">No</label>
+        </div>
+
+        <label class="form-label">Registered National Voter?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="registeredNationalVoter" id="registeredNationalVoterYes" value="Yes" />
+          <label class="form-check-label" for="registeredNationalVoterYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="registeredNationalVoter" id="registeredNationalVoterNo" value="No" />
+          <label class="form-check-label" for="registeredNationalVoterNo">No</label>
+        </div>
+
+        <label class="form-label">Did you vote in the last SK election?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="votedLastSKElection" id="votedLastSKElectionYes" value="Yes" />
+          <label class="form-check-label" for="votedLastSKElectionYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="votedLastSKElection" id="votedLastSKElectionNo" value="No" />
+          <label class="form-check-label" for="votedLastSKElectionNo">No</label>
+        </div>
+
+        <label class="form-label">Have you attended a KK Assembly?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="attendedAssembly" id="attendedAssemblyYes" value="Yes" />
+          <label class="form-check-label" for="attendedAssemblyYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="attendedAssembly" id="attendedAssemblyNo" value="No" />
+          <label class="form-check-label" for="attendedAssemblyNo">No</label>
+        </div>
+
+        <div id="kkAssemblyYesDetails" class="d-none mb-3">
+          <label for="timesAttended" class="form-label">If Yes, how many times?</label>
+          <select class="form-select" id="timesAttended" name="timesAttended">
+            <option value="" disabled selected>Select</option>
+            <option>1-2</option>
+            <option>3-4</option>
+            <option>5 and above</option>
+          </select>
+        </div>
+
+        <div id="kkAssemblyNoDetails" class="d-none">
+          <label class="form-label">If No, why?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noAssemblyNoMeeting" name="noAssemblyReason" value="No Assembly" />
+            <label class="form-check-label" for="noAssemblyNoMeeting">No Assembly</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noAssemblyNotInterested" name="noAssemblyReason" value="Not Interested" />
+            <label class="form-check-label" for="noAssemblyNotInterested">Not Interested</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noAssemblyNotInformed" name="noAssemblyReason" value="Not Informed" />
+            <label class="form-check-label" for="noAssemblyNotInformed">Not Informed</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noAssemblyNotAvailable" name="noAssemblyReason" value="Not Available" />
+            <label class="form-check-label" for="noAssemblyNotAvailable">Not Available</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noAssemblyOthers" name="noAssemblyReason" value="Others" />
+            <label class="form-check-label" for="noAssemblyOthers">Others (please specify)</label>
+            <input type="text" class="form-control mt-2 d-none" id="noAssemblyOthersText" name="noAssemblyOthersText" placeholder="Please specify other reasons" />
+          </div>
+        </div>
+      </section>
+
+      <!-- XI. Skills and Interests -->
+      <section class="mb-4">
+        <h4 class="mb-3">XI. Skills and Interests</h4>
+
+        <label class="form-label">Skills You Currently Have (select at least one)</label>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillCooking" name="skills" value="Cooking" />
+              <label class="form-check-label" for="skillCooking">Cooking</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillBaking" name="skills" value="Baking" />
+              <label class="form-check-label" for="skillBaking">Baking</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillDriving" name="skills" value="Driving (Motorcycle/Car)" />
+              <label class="form-check-label" for="skillDriving">Driving (Motorcycle/Car)</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillSewing" name="skills" value="Sewing/Tailoring" />
+              <label class="form-check-label" for="skillSewing">Sewing/Tailoring</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillWelding" name="skills" value="Welding" />
+              <label class="form-check-label" for="skillWelding">Welding</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillGardening" name="skills" value="Gardening/Farming" />
+              <label class="form-check-label" for="skillGardening">Gardening/Farming</label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillProgramming" name="skills" value="Programming/Coding" />
+              <label class="form-check-label" for="skillProgramming">Programming/Coding</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillGraphicDesign" name="skills" value="Graphic Design" />
+              <label class="form-check-label" for="skillGraphicDesign">Graphic Design</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillCarpentry" name="skills" value="Carpentry" />
+              <label class="form-check-label" for="skillCarpentry">Carpentry</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillPlumbing" name="skills" value="Plumbing" />
+              <label class="form-check-label" for="skillPlumbing">Plumbing</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillElectrical" name="skills" value="Electrical Work" />
+              <label class="form-check-label" for="skillElectrical">Electrical Work</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillPublicSpeaking" name="skills" value="Public Speaking" />
+              <label class="form-check-label" for="skillPublicSpeaking">Public Speaking</label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillWriting" name="skills" value="Writing/Blogging" />
+              <label class="form-check-label" for="skillWriting">Writing/Blogging</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillLeadership" name="skills" value="Leadership/Team Management" />
+              <label class="form-check-label" for="skillLeadership">Leadership/Team Management</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillBusiness" name="skills" value="Business/Entrepreneurship" />
+              <label class="form-check-label" for="skillBusiness">Business/Entrepreneurship</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillSocialMedia" name="skills" value="Social Media Management" />
+              <label class="form-check-label" for="skillSocialMedia">Social Media Management</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillVideoEditing" name="skills" value="Video Editing/Animation" />
+              <label class="form-check-label" for="skillVideoEditing">Video Editing/Animation</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="skillPhotography" name="skills" value="Photography" />
+              <label class="form-check-label" for="skillPhotography">Photography</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other skills text -->
+        <div class="form-check mt-3">
+          <input type="checkbox" class="form-check-input" id="skillOther" name="skills" value="Other" />
+          <label class="form-check-label" for="skillOther">Other</label>
+          <input type="text" class="form-control mt-2 d-none" id="skillOtherText" name="skillOtherText" placeholder="Please specify other skills" />
+        </div>
+
+        <!-- Skills You Want to Learn -->
+        <label class="form-label mt-4">Skills You Want to Learn</label>
+        <input type="text" class="form-control mb-3" id="skillsToLearn" name="skillsToLearn" placeholder="List skills you want to learn (comma separated)" />
+
+        <!-- Personal Interests and Hobbies -->
+        <label class="form-label mt-4">Personal Interests and Hobbies</label>
+        <input type="text" class="form-control mb-3" id="personalInterests" name="personalInterests" placeholder="List personal interests or hobbies (comma separated)" />
+      </section>
+
+      <!-- XII. Access to Technology -->
+      <section class="mb-4">
+        <h4 class="mb-3">XII. Access to Technology</h4>
+
+        <label class="form-label">Devices Owned or Access To</label>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="deviceSmartphone" name="devicesOwned" value="Smartphone" />
+          <label class="form-check-label" for="deviceSmartphone">Smartphone</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="deviceLaptop" name="devicesOwned" value="Laptop/Desktop" />
+          <label class="form-check-label" for="deviceLaptop">Laptop/Desktop</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="deviceTablet" name="devicesOwned" value="Tablet" />
+          <label class="form-check-label" for="deviceTablet">Tablet</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="deviceFeaturePhone" name="devicesOwned" value="Feature Phone" />
+          <label class="form-check-label" for="deviceFeaturePhone">Feature Phone</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="deviceNone" name="devicesOwned" value="None" />
+          <label class="form-check-label" for="deviceNone">None</label>
+        </div>
+
+        <label class="form-label mt-3">Internet Access at Home</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="internetAccess" id="internetAccessYes" value="Yes" />
+          <label class="form-check-label" for="internetAccessYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="internetAccess" id="internetAccessNo" value="No" />
+          <label class="form-check-label" for="internetAccessNo">No</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="internetAccess" id="internetAccessSometimes" value="Sometimes" />
+          <label class="form-check-label" for="internetAccessSometimes">Sometimes</label>
+        </div>
+
+        <label class="form-label">Social Media Platforms Used Regularly</label>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="socialFacebook" name="socialMedia" value="Facebook" />
+          <label class="form-check-label" for="socialFacebook">Facebook</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="socialInstagram" name="socialMedia" value="Instagram" />
+          <label class="form-check-label" for="socialInstagram">Instagram</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="socialTikTok" name="socialMedia" value="TikTok" />
+          <label class="form-check-label" for="socialTikTok">TikTok</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="socialTwitter" name="socialMedia" value="Twitter" />
+          <label class="form-check-label" for="socialTwitter">Twitter (X)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="socialYouTube" name="socialMedia" value="YouTube" />
+          <label class="form-check-label" for="socialYouTube">YouTube</label>
+        </div>
+        <div class="form-check mt-2">
+          <input type="checkbox" class="form-check-input" id="socialOthers" name="socialMedia" value="Others" />
+          <label class="form-check-label" for="socialOthers">Others (please specify)</label>
+          <input type="text" class="form-control mt-2 d-none" id="socialOthersText" name="socialOthersText" placeholder="Please specify other platforms" />
+        </div>
+      </section>
+
+      <!-- XIII. Organizational Involvement -->
+      <section class="mb-4">
+        <h4 class="mb-3">XIII. Organizational Involvement</h4>
+
+        <label class="form-label">Member of Youth Organization?</label>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="memberYouthOrg" id="memberYouthOrgYes" value="Yes" />
+          <label class="form-check-label" for="memberYouthOrgYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="memberYouthOrg" id="memberYouthOrgNo" value="No" />
+          <label class="form-check-label" for="memberYouthOrgNo">No</label>
+        </div>
+
+        <input type="text" class="form-control mb-3 d-none" id="youthOrgName" name="youthOrgName" placeholder="If Yes, enter organization name" />
+
+        <label class="form-label">Member of Community/Church Group?</label>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="memberCommunityGroup" id="memberCommunityGroupYes" value="Yes" />
+          <label class="form-check-label" for="memberCommunityGroupYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="memberCommunityGroup" id="memberCommunityGroupNo" value="No" />
+          <label class="form-check-label" for="memberCommunityGroupNo">No</label>
+        </div>
+
+        <label class="form-label">Member of Katipunan ng Kabataan (KK)?</label>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="memberKK" id="memberKKYes" value="Yes" />
+          <label class="form-check-label" for="memberKKYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="memberKK" id="memberKKNo" value="No" />
+          <label class="form-check-label" for="memberKKNo">No</label>
+        </div>
+
+        <label class="form-label">Current or Former SK Official?</label>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="formerSKOfficial" id="formerSKOfficialYes" value="Yes" />
+          <label class="form-check-label" for="formerSKOfficialYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input class="form-check-input" type="radio" name="formerSKOfficial" id="formerSKOfficialNo" value="No" />
+          <label class="form-check-label" for="formerSKOfficialNo">No</label>
+        </div>
+
+        <div id="skOfficialDetails" class="d-none">
+          <label for="positionHeld" class="form-label">Position Held</label>
+          <input type="text" class="form-control mb-3" id="positionHeld" name="positionHeld" placeholder="Enter position held" />
+
+          <label for="yearsServed" class="form-label">Year(s) Served</label>
+          <input type="text" class="form-control" id="yearsServed" name="yearsServed" placeholder="Enter years served" />
+        </div>
+      </section>
+
+      <!-- XIV. Data Privacy & Consent -->
+      <section class="mb-4">
+        <h4 class="mb-3">XIV. Data Privacy & Consent</h4>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="dataConsent" name="dataConsent" required />
+          <label class="form-check-label" for="dataConsent">
+            I confirm that all information provided is true and correct. I consent to the use of this data for youth profiling, program planning, and local governance purposes in accordance with the Data Privacy Act of 2012.
+          </label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+      </section>
+
+      <!-- XV. Signature -->
+      <section class="mb-5">
+        <h4 class="mb-3">XV. Signature</h4>
+
+        <label class="form-label mb-1">Draw or Upload E-signature</label>
+        <canvas id="signaturePad" class="signature-pad border rounded mb-2"></canvas>
+        <div class="d-flex gap-2 mb-3">
+          <button type="button" class="btn btn-outline-secondary" id="clearSignatureBtn" aria-label="Clear signature">Clear</button>
+          <input type="file" id="uploadSignature" accept="image/*" aria-label="Upload signature image" />
+        </div>
+        <div id="signaturePreview" class="mb-3"></div>
+      </section>
+
+      <!-- Submit and options -->
+      <section class="mb-5">
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="sendCopy" />
+          <label class="form-check-label" for="sendCopy">Send me a copy of my answers via email</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" id="submitBtn">Submit Survey</button>
+        <small id="formHelp" class="form-text text-muted mt-2 d-block text-center">
+          Upon submission, you will be redirected to the homepage.
+        </small>
+      </section>
+    </form>
+  </main>
+
+   <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>© 2024 Youth Governance System - San Jose, Batangas</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <script src="js/kk-profiling-survey-2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

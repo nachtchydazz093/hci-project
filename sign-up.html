@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - LYDO San Jose</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/sign-up.css" />
+</head>
+<body>
+ <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top"
+    aria-label="Primary navigation"
+  >
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" class="nav-logo" />
+        <span class="ms-2 fw-bold text-primary">LYDO San Jose</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="lydo-council.html"
+              >LYDO Council</a
+            >
+          </li>
+          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Project, Programs and Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="kk-profiling.html">KK Profiling Survey</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link auth-btn signin-btn" href="sign-in.html" aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link auth-btn signup-btn" href="sign-up.html" aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item ms-3 d-none d-lg-block">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<main class="signup-container container-sm py-5">
+  <form id="signUpForm" class="signup-form p-4 shadow rounded bg-white needs-validation" novalidate>
+    <h2 class="mb-4 text-center">Create Your Account</h2>
+
+    <!-- Server-side Error Message -->
+    <div id="serverError" class="alert alert-danger d-none" role="alert">
+      Something went wrong. Please try again.
+    </div>
+
+    <!-- Username -->
+    <div class="mb-3">
+      <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        class="form-control"
+        required
+        placeholder="Enter username"
+        aria-required="true"
+        aria-describedby="usernameHelp"
+        autocomplete="username"
+      />
+      <small id="usernameHelp" class="form-text text-muted">Your username must be unique.</small>
+      <div class="invalid-feedback">Please enter a username.</div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        required
+        placeholder="Enter email"
+        aria-required="true"
+        autocomplete="email"
+      />
+      <div class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+      <div class="input-group">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          required
+          placeholder="Enter password"
+          minlength="8"
+          aria-required="true"
+          autocomplete="new-password"
+        />
+        <button type="button" class="btn btn-outline-secondary toggle-password" data-target="password" tabindex="-1" aria-label="Toggle password visibility">
+          <i class="fa-solid fa-eye-slash"></i>
+        </button>
+      </div>
+      <small id="passwordHelp" class="form-text text-muted">Use 8+ characters with letters, numbers, and symbols.</small>
+      <div class="invalid-feedback">Password must be at least 8 characters.</div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+      <div class="input-group">
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          class="form-control"
+          required
+          placeholder="Confirm password"
+          autocomplete="new-password"
+        />
+        <button type="button" class="btn btn-outline-secondary toggle-password" data-target="confirmPassword" tabindex="-1" aria-label="Toggle confirm password visibility">
+          <i class="fa-solid fa-eye-slash"></i>
+        </button>
+      </div>
+      <div class="invalid-feedback" id="confirmPasswordFeedback">
+        Passwords do not match.
+      </div>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="form-check mb-4">
+      <input class="form-check-input" type="checkbox" id="terms" required />
+      <label class="form-check-label" for="terms">
+        I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>
+      </label>
+      <div class="invalid-feedback">You must agree before submitting.</div>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+
+    <p class="mt-3 text-center">
+      Already have an account? <a href="signin.html">Sign In</a>
+    </p>
+  </form>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>© 2024 Youth Governance System - San Jose, Batangas</p>
+      </div>
+      <div class="col-md-6 text-end">
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FontAwesome + JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="js/sign-up.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

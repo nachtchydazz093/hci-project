@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KK Profiling Survey - Personal Information</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/kk-profiling-survey-1.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm"
+    aria-label="Primary navigation"
+  >
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" class="nav-logo" />
+        <span class="ms-2 fw-bold text-primary">LYDO San Jose</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="lydo-council.html">LYDO Council</a></li>
+          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Projects, Programs and Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="kk-profiling.html">KK Profiling Survey</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link auth-btn signin-btn" href="sign-in.html" aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link auth-btn signup-btn" href="sign-up.html" aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item ms-3 d-none d-lg-block">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-form" role="main">
+    <form id="kkSurveyForm" novalidate>
+      <!-- A. Personal Information -->
+      <div class="section-heading">A. Personal Information</div>
+
+      <div class="name-row">
+        <div class="mb-3">
+          <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+          <input
+            type="text"
+            id="firstName"
+            class="form-control"
+            placeholder="Enter First Name"
+            required
+            autocomplete="given-name"
+          />
+          <div class="invalid-feedback">Please enter your first name.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="middleName" class="form-label">Middle Name</label>
+          <input
+            type="text"
+            id="middleName"
+            class="form-control"
+            placeholder="Enter Middle Name"
+            autocomplete="additional-name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+          <input
+            type="text"
+            id="lastName"
+            class="form-control"
+            placeholder="Enter Last Name"
+            required
+            autocomplete="family-name"
+          />
+          <div class="invalid-feedback">Please enter your last name.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="suffix" class="form-label">Suffix (if applicable)</label>
+          <input
+            type="text"
+            id="suffix"
+            class="form-control"
+            placeholder="e.g., Jr., Sr., III"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label d-block">Sex <span class="text-danger">*</span></label>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="sex"
+            id="sexMale"
+            value="Male"
+            required
+          />
+          <label class="form-check-label" for="sexMale">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="sex"
+            id="sexFemale"
+            value="Female"
+            required
+          />
+          <label class="form-check-label" for="sexFemale">Female</label>
+        </div>
+        <div class="invalid-feedback d-block" id="sexFeedback">Please select your sex.</div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="birthDate" class="form-label">Birthdate <span class="text-danger">*</span></label>
+          <input
+            type="date"
+            id="birthDate"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Please enter your birthdate.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="age" class="form-label">Age <span class="text-danger">*</span></label>
+          <input
+            type="number"
+            id="age"
+            class="form-control"
+            placeholder="Auto-calculated"
+            readonly
+            required
+          />
+          <div class="invalid-feedback">Age will be calculated automatically.</div>
+        </div>
+      </div>
+
+      <div class="mb-3 mt-3">
+        <label for="civilStatus" class="form-label">Civil Status <span class="text-danger">*</span></label>
+        <select id="civilStatus" class="form-select" required>
+          <option value="" selected disabled>Select your civil status</option>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Widowed</option>
+          <option>Separated</option>
+          <option>Divorced</option>
+        </select>
+        <div class="invalid-feedback">Please select your civil status.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="citizenship" class="form-label">Citizenship <span class="text-danger">*</span></label>
+        <input
+          type="text"
+          id="citizenship"
+          class="form-control"
+          placeholder="Enter your citizenship"
+          required
+        />
+        <div class="invalid-feedback">Please enter your citizenship.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="Enter your email address"
+          required
+          autocomplete="email"
+        />
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="contactNumber" class="form-label">Contact Number <span class="text-danger">*</span></label>
+        <input
+          type="tel"
+          id="contactNumber"
+          class="form-control"
+          placeholder="Enter your contact number"
+          required
+          pattern="[0-9]{7,15}"
+          title="Please enter a valid phone number (7 to 15 digits)"
+        />
+        <div class="invalid-feedback">
+          Please enter a valid contact number (7 to 15 digits).
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="facebook" class="form-label">Facebook Name / Link (Optional)</label>
+        <input
+          type="text"
+          id="facebook"
+          class="form-control"
+          placeholder="Enter your Facebook name or profile link"
+        />
+      </div>
+
+      <!-- B. Residential Information -->
+      <div class="section-heading">B. Residential Information</div>
+
+      <div class="mb-3">
+        <label for="postalCode" class="form-label">Postal Code</label>
+        <input
+          type="text"
+          id="postalCode"
+          class="form-control"
+          value="4225"
+          readonly
+          disabled
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="region" class="form-label">Region</label>
+        <input
+          type="text"
+          id="region"
+          class="form-control"
+          value="IV A"
+          readonly
+          disabled
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="province" class="form-label">Province</label>
+        <input
+          type="text"
+          id="province"
+          class="form-control"
+          value="Batangas"
+          readonly
+          disabled
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="municipality" class="form-label">Municipality / City</label>
+        <input
+          type="text"
+          id="municipality"
+          class="form-control"
+          value="San Jose"
+          readonly
+          disabled
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="barangay" class="form-label">Barangay <span class="text-danger">*</span></label>
+        <select id="barangay" class="form-select" required>
+          <option value="" disabled selected>Select your barangay</option>
+          <option>Aguila</option>
+          <option>Anus</option>
+          <option>Aya</option>
+          <option>Bagong Pook</option>
+          <option>Balagtasin</option>
+          <option>Balagtasin I</option>
+          <option>Banaybanay I</option>
+          <option>Banaybanay II</option>
+          <option>Bigain I</option>
+          <option>Bigain II</option>
+          <option>Calansayan</option>
+          <option>Dagatan</option>
+          <option>Don Luis</option>
+          <option>Galamay-Amo</option>
+          <option>Lalayat</option>
+          <option>Lapolapo I</option>
+          <option>Lapolapo II</option>
+          <option>Lepute</option>
+          <option>Lumil</option>
+          <option>Natunuan</option>
+          <option>Palanca</option>
+          <option>Pinagtung-Ulan</option>
+          <option>Poblacion Barangay I</option>
+          <option>Poblacion Barangay II</option>
+          <option>Poblacion Barangay III</option>
+          <option>Poblacion Barangay IV</option>
+          <option>Sabang</option>
+          <option>Salaban</option>
+          <option>Santo Cristo</option>
+          <option>Mojon-Tampoy</option>
+          <option>Taysan</option>
+          <option>Tugtug</option>
+          <option>Bigain South</option>
+        </select>
+        <div class="invalid-feedback">Please select your barangay.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="fullAddress" class="form-label">Full Address <span class="text-danger">*</span></label>
+        <input
+          type="text"
+          id="fullAddress"
+          class="form-control"
+          placeholder="House No., Street, Purok/Sitio"
+          required
+        />
+        <div class="invalid-feedback">Please enter your full address.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Next: Demographic Characteristics</button>
+    </form>
+  </main>
+
+   <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>© 2024 Youth Governance System - San Jose, Batangas</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/kk-profiling-survey-1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

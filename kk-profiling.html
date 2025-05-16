@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KK Profiling Survey - Youth Governance System</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/kk-profiling.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm"
+    aria-label="Primary navigation"
+  >
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" class="nav-logo" />
+        <span class="ms-2 fw-bold text-primary">LYDO San Jose</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="lydo-council.html">LYDO Council</a></li>
+          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Projects, Programs and Activities</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kk-profiling.html">KK Profiling Survey</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link auth-btn signin-btn" href="sign-in.html" aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link auth-btn signup-btn" href="sign-up.html" aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item ms-3 d-none d-lg-block">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="kk-container my-5">
+    <h1 class="kk-title text-center mb-3">KK Profiling Survey</h1>
+    <p class="kk-subtitle text-center mb-4">
+      Data Privacy & Consent - Please read carefully before proceeding.
+    </p>
+
+    <section
+      class="kk-privacy-box shadow-sm"
+      tabindex="0"
+      aria-label="Data Privacy and Consent Information"
+    >
+      <p>
+        The Local Youth Development Office (LYDO) of San Jose, Batangas is committed to protecting your personal data.
+        By agreeing to participate in this survey, you willingly provide your information for analysis and planning purposes only.
+        Your data will be handled with the strictest confidentiality and used solely to help develop youth programs.
+      </p>
+
+      <p><strong>Key Points:</strong></p>
+      <ul>
+        <li>Your data will be securely stored and never shared with unauthorized parties.</li>
+        <li>Information is used exclusively for statistical analysis and youth development initiatives.</li>
+        <li>You can withdraw consent or participation anytime.</li>
+        <li>Survey responses will remain confidential and anonymized where applicable.</li>
+      </ul>
+
+      <p>
+        By clicking <strong>"I Agree"</strong>, you confirm your understanding and consent to these terms.
+      </p>
+    </section>
+
+    <form id="consentForm" class="kk-consent-form mt-4" aria-describedby="consentHelp" novalidate>
+      <div class="form-check d-flex align-items-center justify-content-center">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="agreeCheckbox"
+          aria-required="true"
+          aria-describedby="consentHelp"
+          required
+        />
+        <label class="form-check-label ms-2" for="agreeCheckbox">
+          I have read and agree to the terms and conditions.
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4" id="proceedBtn" disabled>
+        Proceed to KK Profiling Survey
+        <i class="fa-solid t ms-2"></i>
+      </button>
+
+      <small id="consentHelp" class="form-text text-center text-muted mt-2">
+        You must agree before continuing.
+      </small>
+    </form>
+  </main>
+
+   <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>© 2024 Youth Governance System - San Jose, Batangas</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/kk-profiling.js"></script>
+</body>
+</html>

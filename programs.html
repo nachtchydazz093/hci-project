@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SK Officials - Youth Governance System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/programs.css" />
+
+</head>
+<body>
+ <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light sticky-top"
+    aria-label="Primary navigation"
+  >
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="LYDO Home">
+        <img src="img/temp-lydo.png" alt="LYDO Logo" class="nav-logo" />
+        <span class="ms-2 fw-bold text-primary">LYDO San Jose</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="lydo-council.html"
+              >LYDO Council</a
+            >
+          </li>
+          <li class="nav-item"><a class="nav-link" href="sk-official.html">SK Official</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Project, Programs and Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="kk-profiling.html">KK Profiling Survey</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link auth-btn signin-btn" href="sign-in.html" aria-label="Sign in"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link auth-btn signup-btn" href="sign-up.html" aria-label="Sign up"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item ms-3 d-none d-lg-block">
+            <a href="#" aria-label="Youth Logo">
+              <img src="img/sk.png" alt="Youth Logo" class="sk-logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="council-hero text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4">Projects, Programs, and Activities</h1>
+      <p class="lead mb-5">
+       Empowering the youth of San Jose, Batangas through meaningful initiatives
+      </p>
+      <a href="#events" class="btn btn-light btn-lg">Explore Events</a>
+    </div>
+  </section>
+
+  <!-- Projects, Programs & Activities Section -->
+<section class="projects-section py-5" id="projects-programs">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="fw-bold mb-3">Projects, Programs, and Activities</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="lead">
+          Our commitment to developing the youth of San Jose, Batangas through impactful projects, innovative programs, and dynamic activities that foster growth, leadership, and community engagement.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Project Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card p-4 text-center shadow-sm rounded h-100">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Youth Empowerment Projects</h4>
+          <p>
+            Initiatives designed to empower the youth through education, skills training, and leadership development programs that prepare them for future challenges.
+          </p>
+        </div>
+      </div>
+
+      <!-- Program Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card p-4 text-center shadow-sm rounded h-100">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-people-carry"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Community Development Programs</h4>
+          <p>
+            Programs aimed at promoting active youth participation in community welfare, environmental protection, and public service projects.
+          </p>
+        </div>
+      </div>
+
+      <!-- Activity Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card p-4 text-center shadow-sm rounded h-100">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-running"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Engaging Youth Activities</h4>
+          <p>
+            Dynamic and interactive activities such as workshops, forums, and team-building exercises designed to build camaraderie and practical skills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="search-section my-4 container">
+  <input
+    type="search"
+    id="eventSearch"
+    class="form-control"
+    placeholder="Search events..."
+    aria-label="Search events"
+  />
+</section>
+
+<main id="events" class="events-container">
+  <!-- Your event cards here -->
+  <!-- Event 1 -->
+  <article class="event-card">
+    <img src="img/P1.png" alt="SK Mandatory Training 2025" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Sangguniang Kabataan Mandatory Training of Newly Appointed SK Secretary and Treasurers</h2>
+      <p class="event-date">April 16, 2025</p>
+      <p class="event-description">
+        Sangguniang Kabataan Secretary and Treasurers from barangay Bagong Pook and Natunuan actively participated in the Sangguniang Kabataan Mandatory Training (SKMT) designed for newly appointed SK Secretaries and Treasurers. The training aimed to equip the youth officials with the necessary knowledge and skills in performing their duties and responsibilities effectively, in line with the provisions of Republic Act No. 10742 or the SK Reform Act of 2015. Through lectures and interactive sessions, participants gained valuable insights on youth governance, financial management, and administrative procedures.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Municipal Government Center, Brgy. Don Luis, San Jose, Batangas</p>
+    </div>
+  </article>
+
+  <!-- Event 2 -->
+  <article class="event-card">
+    <img src="img/P2.png" alt="SK Federation Monthly Meeting April 2025" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Sangguniang Kabataan Federation Monthly Meeting</h2>
+      <p class="event-date">April 12, 2025</p>
+      <p class="event-description">
+        The SK Federation Monthly Meeting was held to discuss ongoing projects, address current issues, and plan future activities aimed at enhancing youth engagement and development within the community.
+      </p>
+      <h5>Agenda</h5>
+      <ul>
+        <li>Introduction to the new SK Chairperson</li>
+        <li>Alumni Unity Walk for a Cause</li>
+        <li>Compliances</li>
+        <li>Other Matters</li>
+      </ul>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Municipal Government Center, Brgy. Don Luis, San Jose, Batangas</p>
+    </div>
+  </article>
+
+  <!-- Event 3 -->
+  <article class="event-card">
+    <img src="img/P3.png" alt="Webinar SK Web Portal Creation" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Webinar on "SK Web Portal Creation and Document Submission"</h2>
+      <p class="event-date">March 31, 2025</p>
+      <p class="event-description">
+        Members of the Sangguniang Kabataan and staff from the Local Youth Development Office of the Municipality of San Jose, Batangas, participated in a webinar titled "SK Web Portal Creation and Document Submission" organized by NYC CALABARZON and DILG IV-A.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> Online Webinar</p>
+    </div>
+  </article>
+
+  <!-- Event 4 -->
+  <article class="event-card">
+    <img src="img/P4.png" alt="Discussion of 2025 National and Local Elections Prohibitions" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Discussion of 2025 National And Local Elections Prohibitions to Sangguniang Kabataan</h2>
+      <p class="event-date">March 27, 2025</p>
+      <p class="event-description">
+        Sangguniang Kabataan of San Jose, Batangas, conducted a significant consultative meeting with representatives from the Commission on Elections (COMELEC), led by Mrs. Janice S. Madarang. The discussion focused on the essential prohibitions enforced during the forthcoming 2025 National and Local Elections. The purpose was to provide vital information regarding the regulations pertaining to the electoral process, ensuring SK members are adequately informed.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Municipal Government Center, Brgy. Don Luis, San Jose, Batangas</p>
+    </div>
+  </article>
+
+  <!-- Event 5 -->
+  <article class="event-card">
+    <img src="img/P5.png" alt="Webinar on Empowering Youth Development" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Webinar: Empowering Youth Development - Enhancing SGLG Performance in Local Good Governance</h2>
+      <p class="event-date">February 28, 2025</p>
+      <p class="event-description">
+        Members of the Sangguniang Kabataan, the Local Youth Development Council, and staff from the Local Youth Development Office of San Jose, Batangas, participated in a webinar titled “Empowering Youth Development: Enhancing SGLG Performance in Local Good Governance”, organized by NYC CALABARZON.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> Online Webinar</p>
+    </div>
+  </article>
+
+  <!-- Event 6 -->
+  <article class="event-card">
+    <img src="img/P6.png" alt="Roots of Love: Tree Planting Activity" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Roots of Love: Planting Trees, Growing Heart (Tree Planting Activity)</h2>
+      <p class="event-date">February 15, 2025</p>
+      <p class="event-description">
+        The Local Youth Development Council of San Jose, Batangas joined forces with HIRAYA Youth Council for a tree planting activity, promoting environmental stewardship and community development.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> Brgy. Bigain II, San Jose, Batangas</p>
+    </div>
+  </article>
+
+  <!-- Event 7 -->
+  <article class="event-card">
+    <img src="img/P7.png" alt="Linggo ng Kabataan 2024" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Linggo ng Kabataan 2024: Mobile Legends Tournament</h2>
+      <p class="event-date">August 17, 2024</p>
+      <p class="event-description">
+        The final activity of the Linggo ng Kabataan 2024 celebration was an exciting Mobile Legends tournament. This eSports event showcased how competitive gaming served as a platform for youth to develop strategic thinking and teamwork. Winner: Team Cerberus.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Municipal Government Center, Brgy. Don Luis, San Jose, Batangas</p>
+    </div>
+  </article>
+
+  <!-- Event 8 -->
+  <article class="event-card">
+    <img src="img/P8.png" alt="Youth Booth Fair Competition 2024" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Youth Booth Fair Competition 2024: Barakahan ng Kabataan</h2>
+      <p class="event-date">August 16, 2024</p>
+      <p class="event-description">
+        The booth of the Sangguniang Kabataan Federation and Local Youth Development Council of San Jose, Batangas bagged third place in the Youth Booth Fair Competition 2024 Barakahan ng Kabataan.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> Batangas Provincial Auditorium, Batangas City</p>
+    </div>
+  </article>
+
+  <!-- Event 9 -->
+  <article class="event-card">
+    <img src="img/P9.png" alt="Clean-Up Drive" class="event-img" />
+    <div class="event-content">
+      <h2 class="event-title">Clean-Up Drive</h2>
+      <p class="event-date">June 8, 2024</p>
+      <p class="event-description">
+        The Office of the Municipal Mayor-Youth Development Section, the Office of the Municipal Agriculturist, and the Sangguniang Kabataan Federation of San Jose, Batangas, organized a clean-up drive in Pansol, San Jose, Batangas. The activity aims to ensure citizens' rights to a clean and healthy environment, empowering youth participation in protecting the environment.
+      </p>
+      <p class="event-location"><i class="fas fa-map-marker-alt"></i> Pansol, San Jose, Batangas</p>
+    </div>
+  </article>
+  </main>
+
+ <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>© 2024 Youth Governance System - San Jose, Batangas</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Place before closing body tag -->
+<script src="js/programs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
